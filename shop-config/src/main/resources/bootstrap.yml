@@ -1,0 +1,22 @@
+spring:
+    application:
+        name: shop-config
+    profiles:
+        active: dev
+
+    cloud:
+        config:
+            profile: dev
+            server:
+                git:
+                    uri: https://github.com/sunryan/spring-cloud-config.git
+                    searchPaths: ryan-shop
+
+
+server:
+    port: 8102
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8101/eureka/

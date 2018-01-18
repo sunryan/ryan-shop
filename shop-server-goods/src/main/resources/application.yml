@@ -1,0 +1,15 @@
+spring:
+    application:
+        name: shop-server-goods
+
+server:
+    port: 8201
+
+
+security:
+    oauth2:
+        resource:
+            id: shop-server-goods
+            user-info-uri: http://localhost:8201/user
+            prefer-token-info: false
+
